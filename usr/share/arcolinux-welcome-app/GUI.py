@@ -18,10 +18,10 @@ if DEBUG:
 else:
     user = "liveuser"
 
-Settings = home + "/.config/arcolinux-welcome-app/settings.conf"
-Skel_Settings = "/etc/skel/.config/PAKOSlinux-welcome-app/settings.conf"
-dot_desktop = "/usr/share/applications/PAKOSlinux-welcome-app.desktop"
-autostart = home + "/.config/autostart/PAKOSlinux-welcome-app.desktop"
+Settings = home + "/.config/pakoslinux-welcome-app/settings.conf"
+Skel_Settings = "/etc/skel/.config/pakoslinux-welcome-app/settings.conf"
+dot_desktop = "/usr/share/applications/pakoslinux-welcome-app.desktop"
+autostart = home + "/.config/autostart/pakoslinux-welcome-app.desktop"
 
 
 def GUI(self, Gtk, GdkPixbuf):
@@ -61,11 +61,11 @@ def GUI(self, Gtk, GdkPixbuf):
 
     label = Gtk.Label(xalign=0)
     label.set_markup(
-        "<big>Welcome to <b>PAKOSLinux</b></big>")
+        "<big>Welcome to <b>pakosLinux</b></big>")
     label.set_line_wrap(True)
 
     # pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
-    #     os.path.join(base_dir, 'images/PAKOSlinux-one-liner.png'), 145, 145)
+    #     os.path.join(base_dir, 'images/pakoslinux-one-liner.png'), 145, 145)
     # image = Gtk.Image().new_from_pixbuf(pixbuf)
 
     label2 = Gtk.Label(xalign=0)
@@ -86,10 +86,10 @@ def GUI(self, Gtk, GdkPixbuf):
             "<b>Telegram</b> is for chitchat - <b>Discord</b> is for assistance.\n" +  # noqa
             "We have a <b>forum</b> for the longer and more technical questions.\n")
         label_warning.set_markup(
-            "\n<span size='x-large'><b>Use the Easy Installation\n" + # noqa
+            "\n<span size='x-large'><b>Use the Base Installation\n" + # noqa
             "if the Advanced Installation fails</b></span>\n")  # noqa
     else:
-        label2.set_markup("The links below will get you started on PAKOSLinux. We communicate with our community via a diversity of social media.\n"
+        label2.set_markup("The links below will get you started on pakosLinux. We communicate with our community via a diversity of social media.\n"
                           "Do join us to learn the latest news, ask questions or for casual talk.\n" +  # noqa
                           "<b>Telegram</b> is for chitchat - <b>Discord</b> is for assistance.\n" +  # noqa
                           "We have a <b>forum</b> for the longer and more technical questions.\n" +  # noqa
@@ -113,7 +113,7 @@ def GUI(self, Gtk, GdkPixbuf):
 
     button2 = Gtk.Button(label="")
     button2_label = button2.get_child()
-    button2_label.set_markup("<span size='large'><b>Easy Installation (Offline)</b></span>")
+    button2_label.set_markup("<span size='large'><b>Base Installation (Offline)</b></span>")
 
     button2.connect("clicked", self.on_ai_clicked)
     button2.set_size_request(0, 80)
@@ -210,27 +210,27 @@ def GUI(self, Gtk, GdkPixbuf):
     # change this one every year
     button3 = Gtk.Button(label="Release info")
     button3.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/releases-2022/")
+                    "https://pakoslinux.info/releases-2022/")
     button3.set_size_request(180, 50)
 
     button4 = Gtk.Button(label="Choose your project")
     button4.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/choose-your-project/")
+                    "https://pakoslinux.info/choose-your-project/")
     button4.set_size_request(180, 50)
 
     button5 = Gtk.Button(label="Core info")
     button5.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/arcolinux-editions/")
+                    "https://pakoslinux.info/pakoslinux-editions/")
     button5.set_size_request(180, 50)
 
     button6 = Gtk.Button(label="Fast track")
     button6.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/fast-track/")
+                    "https://pakoslinux.info/fast-track/")
     button6.set_size_request(180, 50)
 
     button7 = Gtk.Button(label="Forum")
     button7.connect("clicked", self.on_link_clicked,
-                    "http://arcolinuxforum.com/")
+                    "http://pakoslinuxforum.com/")
     button7.set_size_request(180, 50)
 
     button70 = Gtk.Button(label="Screen resolution")
@@ -252,24 +252,24 @@ def GUI(self, Gtk, GdkPixbuf):
     button8_label = button8.get_child()
     button8_label.set_markup("<b>Donate</b>")
     button8.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/donation/")
+                    "https://pakoslinux.info/donation/")
 
     button9 = Gtk.Button(label="Get Involved - Betatester")
     button9.connect("clicked", self.on_link_clicked,
-                    "https://arcolinux.info/looking-for-betatesters/")
+                    "https://pakoslinux.info/looking-for-betatesters/")
 
     button10 = Gtk.Button(label="Get Involved - AAG")
     button10.connect("clicked", self.on_link_clicked,
-                     "https://www.arcolinux.info/joining-the-arcolinux-auditing-group/")
+                     "https://www.pakoslinux.info/joining-the-pakoslinux-auditing-group/")
 
-    button11 = Gtk.Button(label="Youtube ArcoLinux Channel")
+    button11 = Gtk.Button(label="Youtube pakosLinux Channel")
     button11.connect("clicked", self.on_link_clicked,
                      "https://www.youtube.com/erikdubois")
 
     button12 = Gtk.Button(label="Quit")
     button12.set_size_request(200, 50)
     button12.connect("clicked", Gtk.main_quit)
-    #button12.set_tooltip_markup("Quit the ArcoLinux Welcome App")
+    #button12.set_tooltip_markup("Quit the pakosLinux Welcome App")
 
     hbox5.pack_start(button8, True, True, 0)
     hbox5.pack_start(button9, True, True, 0)
@@ -355,23 +355,23 @@ def GUI(self, Gtk, GdkPixbuf):
     elE.add(elimage)
 
     fbE.connect("button_press_event", self.on_social_clicked,
-                "https://www.facebook.com/groups/arcolinux")
+                "https://www.facebook.com/groups/pakoslinux")
     tE.connect("button_press_event", self.on_social_clicked,
-               "https://twitter.com/arcolinux")
+               "https://twitter.com/pakoslinux")
     meE.connect("button_press_event", self.on_social_clicked,
                 "https://mewe.com/group/5bbc4577a40f3002b313671d")
     inE.connect("button_press_event", self.on_social_clicked,
-                "https://www.instagram.com/arcolinux/")
+                "https://www.instagram.com/pakoslinux/")
     liE.connect("button_press_event", self.on_social_clicked,
-                "https://www.linkedin.com/in/arcolinux/")
+                "https://www.linkedin.com/in/pakoslinux/")
     pE.connect("button_press_event", self.on_social_clicked,
-               "https://www.patreon.com/arcolinux")
+               "https://www.patreon.com/pakoslinux")
     yE.connect("button_press_event", self.on_social_clicked,
                "https://youtube.com/c/erikdubois")
     dE.connect("button_press_event", self.on_social_clicked,
                "https://discordapp.com/invite/R2amEEz")
     tgE.connect("button_press_event", self.on_social_clicked,
-                "https://t.me/arcolinux_d_b")
+                "https://t.me/pakoslinux_d_b")
     elE.connect("button_press_event", self.on_social_clicked,
                 "https://app.element.io/#/room/!jUDkosOsuDbGWNzKYl:matrix.org")
 
@@ -413,7 +413,7 @@ def GUI(self, Gtk, GdkPixbuf):
     hbox3.pack_start(hbox6, True, False, 0)
 
     # ======================================================================
-    #                   Start Arcolinux Tweak Tool
+    #                   Start pakoslinux Tweak Tool
     # ======================================================================
     launchBox = Gtk.EventBox()
     pblaunch = GdkPixbuf.Pixbuf().new_from_file_at_size(
@@ -426,7 +426,7 @@ def GUI(self, Gtk, GdkPixbuf):
     launchBox.set_property("has-tooltip", True)
     launchBox.connect("query-tooltip",
                       self.tooltip_callback,
-                      "Launch ARCH linux Tweak Tool")
+                      "Launch pakoslinux Tweak Tool")
 
     hbox6.pack_start(launchBox, False, False, 0)
     #hbox6.pack_start(infoE, False, False, 0)

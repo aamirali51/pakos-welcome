@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=PAKOS Welcome App
-GenericName=PAKOS Welcome App
-X-GNOME-FullName=PAKOS Welcome App
-Comment=Welcome Application for PAKOS Installations
-Exec=/usr/local/bin/PAKOS-welcome-app
-Icon=PAKOSlinux-hello
+Name=pakoslinux Welcome App
+GenericName=pakoslinux Welcome App
+X-GNOME-FullName=pakoslinux Welcome App
+Comment=Welcome Application for pakoslinux Installations
+Exec=/usr/local/bin/pakoslinux-welcome-app
+Icon=pakoslinux-hello
 Terminal=false
 Type=Application
 Categories=GTK;Settings;Security;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;X-Unity-Settings-Panel;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
