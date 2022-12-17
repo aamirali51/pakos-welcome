@@ -22,15 +22,15 @@ REMOTE_SERVER = "www.google.com"
 
 class Main(Gtk.Window):
     def __init__(self):
-        super(Main, self).__init__(title="ArcoLinux Welcome App")
+        super(Main, self).__init__(title="Pakos Welcome App")
         self.set_border_width(10)
         self.set_default_size(860, 250)
         self.set_icon_from_file(os.path.join(
             GUI.base_dir, 'images/arcolinux.png'))
         self.set_position(Gtk.WindowPosition.CENTER)
         self.results = ""
-        if not os.path.exists(GUI.home + "/.config/arcolinux-welcome-app/"):
-            os.mkdir(GUI.home + "/.config/arcolinux-welcome-app/")
+        if not os.path.exists(GUI.home + "/.config/Pakos-welcome-app/"):
+            os.mkdir(GUI.home + "/.config/Pakos-welcome-app/")
             with open(GUI.Settings, "w") as f:
                 f.write("autostart=True")
                 f.close()
@@ -188,7 +188,7 @@ class Main(Gtk.Window):
                                    buttons=Gtk.ButtonsType.YES_NO,
                                    text="Not Found!")
             md.format_secondary_markup(
-                "<b>ArcoLinux Tweak Tool</b> was not found on your system\n\
+                "<b>Pakos Tweak Tool</b> was not found on your system\n\
 Do you want to install it?")
 
             result = md.run()
@@ -290,7 +290,7 @@ Do you want to install it?")
                          "--noconfirm"], shell=False)
         GLib.idle_add(self.MessageBox,
                       "Success!",
-                      "<b>ArcoLinux Tweak Tool</b> has been installed successfully")  # noqa
+                      "<b>Pakos Tweak Tool</b> has been installed successfully")  # noqa
     # def get_message(self, title, message):
     #     t = threading.Thread(target=self.fetch_notice,
 #                              args=(title, message,))

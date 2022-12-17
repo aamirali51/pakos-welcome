@@ -18,10 +18,10 @@ if DEBUG:
 else:
     user = "liveuser"
 
-Settings = home + "/.config/arcolinux-welcome-app/settings.conf"
-Skel_Settings = "/etc/skel/.config/arcolinux-welcome-app/settings.conf"
-dot_desktop = "/usr/share/applications/arcolinux-welcome-app.desktop"
-autostart = home + "/.config/autostart/arcolinux-welcome-app.desktop"
+Settings = home + "/.config/Pakos-welcome-app/settings.conf"
+Skel_Settings = "/etc/skel/.config/Pakos-welcome-app/settings.conf"
+dot_desktop = "/usr/share/applications/Pakos-welcome-app.desktop"
+autostart = home + "/.config/autostart/Pakos-welcome-app.desktop"
 
 
 def GUI(self, Gtk, GdkPixbuf):
@@ -61,11 +61,11 @@ def GUI(self, Gtk, GdkPixbuf):
 
     label = Gtk.Label(xalign=0)
     label.set_markup(
-        "<big>Welcome to <b>ArcoLinux</b></big>")
+        "<big>Welcome to <b>Pakos</b></big>")
     label.set_line_wrap(True)
 
     # pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
-    #     os.path.join(base_dir, 'images/arcolinux-one-liner.png'), 145, 145)
+    #     os.path.join(base_dir, 'images/Pakos-one-liner.png'), 145, 145)
     # image = Gtk.Image().new_from_pixbuf(pixbuf)
 
     label2 = Gtk.Label(xalign=0)
@@ -89,7 +89,7 @@ def GUI(self, Gtk, GdkPixbuf):
             "\n<span size='x-large'><b>Use the Easy Installation\n" + # noqa
             "if the Advanced Installation fails</b></span>\n")  # noqa
     else:
-        label2.set_markup("The links below will get you started on ArcoLinux. We communicate with our community via a diversity of social media.\n"
+        label2.set_markup("The links below will get you started on Pakos. We communicate with our community via a diversity of social media.\n"
                           "Do join us to learn the latest news, ask questions or for casual talk.\n" +  # noqa
                           "<b>Telegram</b> is for chitchat - <b>Discord</b> is for assistance.\n" +  # noqa
                           "We have a <b>forum</b> for the longer and more technical questions.\n" +  # noqa
@@ -413,7 +413,7 @@ def GUI(self, Gtk, GdkPixbuf):
     # hbox3.pack_start(hbox6, True, False, 0)
 
     # ======================================================================
-    #                   Start Arcolinux Tweak Tool
+    #                   Start Pakos Tweak Tool
     # ======================================================================
     launchBox = Gtk.EventBox()
     pblaunch = GdkPixbuf.Pixbuf().new_from_file_at_size(
@@ -426,7 +426,7 @@ def GUI(self, Gtk, GdkPixbuf):
     launchBox.set_property("has-tooltip", True)
     launchBox.connect("query-tooltip",
                       self.tooltip_callback,
-                      "Launch Arcolinux Tweak Tool")
+                      "Launch Pakos Tweak Tool")
 
     hbox6.pack_start(launchBox, False, False, 0)
     #hbox6.pack_start(infoE, False, False, 0)
