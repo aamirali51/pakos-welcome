@@ -11,9 +11,9 @@ depends=('gtk3' 'glib2')
 makedepends=('meson' 'git' 'mold' 'rustup' 'clang')
 source=("${pkgname}::git+$url.git")
 sha512sums=('SKIP')
-provides=('pakoswelcome')
-conflicts=('pakoswelcome')
-replaces=('pakoswelcome-tool' 'pakoswelcome-tool-dev')
+provides=('pakos-welcome')
+conflicts=('pakos-welcome')
+replaces=('pakos-welcome-tool' 'pakos-welcome-tool-dev')
 options=(strip)
 
 build() {

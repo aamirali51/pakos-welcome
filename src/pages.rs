@@ -49,37 +49,37 @@ pub fn create_postinstall_page(builder: &Builder) {
     hblock_btn.connect_clicked(on_hblock_btn_clicked);
     switch_to_zsh_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/switch_to_zsh.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/switch_to_zsh.sh"),
             false,
         );
     });
     plasma_firewall_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/firewalled.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/firewalled.sh"),
             false,
         );
     });
     enable_wayland_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/enable_wayland.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/enable_wayland.sh"),
             false,
         );
     });
     init_snapper_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/init_snapper.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/init_snapper.sh"),
             false,
         );
     });
     apply_defaults_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/apply_defaults.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/apply_defaults.sh"),
             false,
         );
     });
     revert_to_bash_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/oh_my_bash.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/oh_my_bash.sh"),
             false,
         );
     });
@@ -189,25 +189,25 @@ pub fn create_drivers_page(builder: &Builder) {
 
     nonfree_drivers_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/nVidia_drivers.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/nVidia_drivers.sh"),
             false,
         );
     });
     free_drivers_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/FOSS_drivers.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/FOSS_drivers.sh"),
             false,
         );
     });
     switch_to_lightdm_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/switch_to_lightdm.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/switch_to_lightdm.sh"),
             false,
         );
     });
     switch_to_sddm_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/switch_to_sddm.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/switch_to_sddm.sh"),
             false,
         );
     });
@@ -353,7 +353,7 @@ pub fn init_mirrorlist_main_button(builder: &Builder) {
     let rank_mirrors_btn: gtk::Button = builder.object("update-arch-mirrorlist").unwrap();
     rank_mirrors_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/rank_mirrors.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/rank_mirrors.sh"),
             false,
         );
     });
@@ -363,7 +363,7 @@ pub fn init_gpg_main_button(builder: &Builder) {
     let fix_keys_btn: gtk::Button = builder.object("fix-gpg-keys").unwrap();
     fix_keys_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/pakoswelcome/scripts/fix_keys.sh"),
+            String::from("/usr/share/pakos-welcome/scripts/fix_keys.sh"),
             false,
         );
     });
@@ -408,7 +408,7 @@ fn on_hblock_btn_clicked(_: &gtk::Button) {
 
 fn on_update_system_btn_clicked(_: &gtk::Button) {
     let _ = utils::run_cmd_terminal(
-        String::from("/usr/share/pakoswelcome/scripts/update_system.sh"),
+        String::from("/usr/share/pakos-welcome/scripts/update_system.sh"),
         false,
     );
 }

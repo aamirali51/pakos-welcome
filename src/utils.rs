@@ -51,11 +51,11 @@ pub fn run_cmd_terminal(cmd: String, escalate: bool) -> bool {
     let cmd_formated = format!("{}; read -p 'Press enter to exit'", cmd);
     let mut args: Vec<&str> = vec![];
     if escalate {
-        args.extend_from_slice(&["-s", "pkexec /usr/share/pakoswelcome/scripts/rootshell.sh"]);
+        args.extend_from_slice(&["-s", "pkexec /usr/share/pakos-welcome/scripts/rootshell.sh"]);
     }
     args.push(cmd_formated.as_str());
 
-    let exit_status = Exec::cmd("/usr/share/pakoswelcome/scripts/terminal-helper")
+    let exit_status = Exec::cmd("/usr/share/pakos-welcome/scripts/terminal-helper")
         .args(args.as_slice())
         .stdout(Redirection::Pipe)
         .join()

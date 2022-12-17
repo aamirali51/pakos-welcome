@@ -1,4 +1,4 @@
-project('pakoswelcome', 'rust',
+project('pakos-welcome', 'rust',
         version: '1.0.9',
         license: 'GPLv3',
         meson_version: '>=0.56.0',
