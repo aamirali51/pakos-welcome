@@ -3,7 +3,7 @@
 pkgname=pakos-welcome
 pkgver=1.0.9
 pkgrel=8
-pkgdesc='Welcome screen for XeroLinux'
+pkgdesc='Welcome screen for pakosLinux'
 arch=('x86_64')
 license=(GPLv3)
 url="https://github.com/aamirali51/pakos-welcome"
