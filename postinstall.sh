@@ -1,9 +1,9 @@
 #!/bin/sh
 
-mkdir -p "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakoswelcome/"
-cp -r "${MESON_SOURCE_ROOT}/src/scripts" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakoswelcome/"
-cp -r "${MESON_SOURCE_ROOT}/data" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakoswelcome/"
-cp -r "${MESON_SOURCE_ROOT}/ui" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakoswelcome/"
+mkdir -p "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakos-welcome/"
+cp -r "${MESON_SOURCE_ROOT}/src/scripts" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakos-welcome/"
+cp -r "${MESON_SOURCE_ROOT}/data" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakos-welcome/"
+cp -r "${MESON_SOURCE_ROOT}/ui" "${DESTDIR}/${MESON_INSTALL_PREFIX}/share/pakos-welcome/"
 
 cd "${MESON_SOURCE_ROOT}/po"
 for lang in $(ls *.po); do
