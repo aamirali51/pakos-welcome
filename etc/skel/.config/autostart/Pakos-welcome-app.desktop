@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=pakos Welcome App
-GenericName=pakos Welcome App
-X-GNOME-FullName=pakos Welcome App
-Comment=Welcome Application for pakos Installations
-Exec=/usr/local/bin/pakos-welcome-app
+Name=Arcolinux Welcome App
+GenericName=Arcolinux Welcome App
+X-GNOME-FullName=Arcolinux Welcome App
+Comment=Welcome Application for Arcolinux Installations
+Exec=/usr/local/bin/arcolinux-welcome-app
 Icon=arcolinux-hello
 Terminal=false
 Type=Application
