@@ -26,7 +26,7 @@ class Main(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(860, 250)
         self.set_icon_from_file(os.path.join(
-            GUI.base_dir, 'images/pakoslinux.png'))
+            GUI.base_dir, 'images/arcolinux.png'))
         self.set_position(Gtk.WindowPosition.CENTER)
         self.results = ""
         if not os.path.exists(GUI.home + "/.config/pakoslinux-welcome-app/"):
