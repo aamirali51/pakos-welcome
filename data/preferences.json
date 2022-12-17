@@ -1,0 +1,22 @@
+{
+    "default_locale": "en",
+    "autostart_path": "~/.config/autostart/pakoswelcome.desktop",
+    "data_path": "/usr/share/pakoswelcome/data/",
+    "desktop_path": "/usr/share/applications/pakoswelcome.desktop",
+    "installer_path": "/usr/bin/calamares",
+    "live_path": "/run/archiso/airootfs",
+    "locale_path": "/usr/share/locale/",
+    "logo_path": "/usr/share/icons/hicolor/scalable/apps/",
+    "save_path": "~/.config/pakoswelcome.json",
+    "ui_path": "/usr/share/pakoswelcome/ui/pakoswelcome.glade",
+    "style_path": "/usr/share/pakoswelcome/ui/style.css",
+    "urls": {
+        "development":"",
+        "website": "",
+        "donate": "",
+        "forum": "",
+        "discord": "",
+        "mastodon": "",
+        "youtube": ""
+    }
+}
