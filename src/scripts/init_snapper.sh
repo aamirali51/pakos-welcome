@@ -2,7 +2,7 @@
 #set -e
 
 echo "#####################################"
-echo "       XeroLinux Snapper Setup       "
+echo "       ArchCALinux Snapper Setup       "
 echo "#####################################"
 sleep 5
 echo "Step 1 - Creating Root Configuration"

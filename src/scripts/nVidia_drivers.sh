@@ -2,13 +2,13 @@
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.xyz
+# Author 	: 	DarkArchCA
+# Website 	: 	http://ArchCAlinux.xyz
 ##################################################################################################################
 echo
 tput setaf 3
 echo "###############################################################################"
-echo "#               XeroLinux nVidia (Proprietary) Driver Installer               #"
+echo "#               ArchCALinux nVidia (Proprietary) Driver Installer               #"
 echo "#                                                                             #"
 echo "#                            !!!! ATTENTION !!!                               #"
 echo "#                                                                             #"

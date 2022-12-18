@@ -49,37 +49,37 @@ pub fn create_postinstall_page(builder: &Builder) {
     hblock_btn.connect_clicked(on_hblock_btn_clicked);
     switch_to_zsh_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/switch_to_zsh.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/switch_to_zsh.sh"),
             false,
         );
     });
     plasma_firewall_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/firewalled.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/firewalled.sh"),
             false,
         );
     });
     enable_wayland_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/enable_wayland.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/enable_wayland.sh"),
             false,
         );
     });
     init_snapper_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/init_snapper.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/init_snapper.sh"),
             false,
         );
     });
     apply_defaults_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/apply_defaults.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/apply_defaults.sh"),
             false,
         );
     });
     revert_to_bash_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/oh_my_bash.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/oh_my_bash.sh"),
             false,
         );
     });
@@ -189,25 +189,25 @@ pub fn create_drivers_page(builder: &Builder) {
 
     nonfree_drivers_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/nVidia_drivers.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/nVidia_drivers.sh"),
             false,
         );
     });
     free_drivers_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/FOSS_drivers.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/FOSS_drivers.sh"),
             false,
         );
     });
     switch_to_lightdm_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/switch_to_lightdm.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/switch_to_lightdm.sh"),
             false,
         );
     });
     switch_to_sddm_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/switch_to_sddm.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/switch_to_sddm.sh"),
             false,
         );
     });
@@ -285,43 +285,43 @@ pub fn create_faq_page(builder: &Builder) {
     let res_btn: gtk::Button = page_builder.object("res").unwrap();
 
     build_iso_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-118.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-118.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     auto_mount_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-95.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-95.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     dualboot_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-5.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-5.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     nvidia_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-124.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-124.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     notfound_linux_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-90.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-90.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     failed_mirrors_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-87.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-87.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     pacman_back_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-115.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-115.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     downgrade_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-37.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-37.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     grub_issue_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-164.html`";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-164.html`";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
     res_btn.connect_clicked(move |_| {
-        let uri = "https://forum.xerolinux.xyz/thread-28.html";
+        let uri = "https://forum.ArchCAlinux.xyz/thread-28.html";
         let _ = gtk::show_uri_on_window(gtk::Window::NONE, uri, 0);
     });
 
@@ -353,7 +353,7 @@ pub fn init_mirrorlist_main_button(builder: &Builder) {
     let rank_mirrors_btn: gtk::Button = builder.object("update-arch-mirrorlist").unwrap();
     rank_mirrors_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/rank_mirrors.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/rank_mirrors.sh"),
             false,
         );
     });
@@ -363,7 +363,7 @@ pub fn init_gpg_main_button(builder: &Builder) {
     let fix_keys_btn: gtk::Button = builder.object("fix-gpg-keys").unwrap();
     fix_keys_btn.connect_clicked(move |_| {
         let _ = utils::run_cmd_terminal(
-            String::from("/usr/share/xerowelcome/scripts/fix_keys.sh"),
+            String::from("/usr/share/ArchCAwelcome/scripts/fix_keys.sh"),
             false,
         );
     });
@@ -408,7 +408,7 @@ fn on_hblock_btn_clicked(_: &gtk::Button) {
 
 fn on_update_system_btn_clicked(_: &gtk::Button) {
     let _ = utils::run_cmd_terminal(
-        String::from("/usr/share/xerowelcome/scripts/update_system.sh"),
+        String::from("/usr/share/ArchCAwelcome/scripts/update_system.sh"),
         false,
     );
 }

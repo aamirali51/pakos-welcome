@@ -11,9 +11,9 @@ depends=('gtk3' 'glib2')
 makedepends=('meson' 'git' 'mold' 'rustup' 'clang')
 source=("${pkgname}::git+$url.git")
 sha512sums=('SKIP')
-provides=('xerowelcome')
-conflicts=('xerowelcome')
-replaces=('xerolinux-tool' 'xerolinux-tool-dev')
+provides=('ArchCAwelcome')
+conflicts=('ArchCAwelcome')
+replaces=('ArchCAlinux-tool' 'ArchCAlinux-tool-dev')
 options=(strip)
 
 build() {

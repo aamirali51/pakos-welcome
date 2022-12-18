@@ -2,13 +2,13 @@
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.xyz
+# Author 	: 	DarkArchCA
+# Website 	: 	http://ArchCAlinux.xyz
 ##################################################################################################################
 echo
 tput setaf 3
 echo "###############################################################################"
-echo "#                          XeroLinux System Updater                           #"
+echo "#                          ArchCALinux System Updater                           #"
 echo "#                                                                             #"
 echo "#                            !!!! ATTENTION !!!                               #"
 echo "#                                                                             #"
@@ -54,7 +54,7 @@ case $CHOICE in
       echo "#######################################"
       echo "                 Done !                "
       echo "#######################################"
-            clear && sh /usr/share/xerowelcome/scripts/update_system.sh
+            clear && sh /usr/share/ArchCAwelcome/scripts/update_system.sh
       ;;
 
     2 )
@@ -68,7 +68,7 @@ case $CHOICE in
       echo "#######################################"
       echo "                 Done !                "
       echo "#######################################"
-            clear && sh /usr/share/xerowelcome/scripts/update_system.sh
+            clear && sh /usr/share/ArchCAwelcome/scripts/update_system.sh
       ;;
 
 

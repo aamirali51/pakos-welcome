@@ -2,8 +2,8 @@
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.xyz
+# Author 	: 	DarkArchCA
+# Website 	: 	http://ArchCAlinux.xyz
 ##################################################################################################################
 echo
 echo "Removing LIGHTDM & its Dependencies"

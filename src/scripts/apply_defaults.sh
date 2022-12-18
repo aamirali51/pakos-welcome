@@ -2,12 +2,12 @@
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.xyz
+# Author 	: 	DarkArchCA
+# Website 	: 	http://ArchCAlinux.xyz
 ##################################################################################################################
 tput setaf 1
 echo "###############################################################################"
-echo "#                         !!! XeroLinux Reset Tool !!!                        #"
+echo "#                         !!! ArchCALinux Reset Tool !!!                        #"
 echo "#                                                                             #"
 echo "#              Having Issues With Messed Up Layout or Settings ?              #"
 echo "#                                                                             #"
@@ -36,15 +36,15 @@ case $CHOICE in
       rm -Rf ~/.local/share/plasma/
       sleep 2
       echo "###################################"
-      echo "Applying latest XeroLinux defaults "
+      echo "Applying latest ArchCALinux defaults "
       echo "###################################"
       sleep 2
       sudo pacman -Rdd kde-rice --noconfirm
       sudo pacman -Rdd kvantum --noconfirm
-      sudo pacman -S xero-kde-config lightly-git latte-dock-git --noconfirm --needed
+      sudo pacman -S ArchCA-kde-config lightly-git latte-dock-git --noconfirm --needed
       cp -rf /etc/skel/. ~
-      sudo sed -i "s/Current=.*/Current=XeroDark/" /etc/sddm.conf.d/kde_settings.conf
-      cd ~ && git clone https://github.com/xerolinux/default-grub.git
+      sudo sed -i "s/Current=.*/Current=ArchCADark/" /etc/sddm.conf.d/kde_settings.conf
+      cd ~ && git clone https://github.com/ArchCAlinux/default-grub.git
       cd ~/default-grub/ && sudo ./install.sh
       rm -rf ~/default-grub
       sleep 2
@@ -66,12 +66,12 @@ case $CHOICE in
       echo "Restoring default settings"
       echo "#################################"
       sleep 2
-      sudo pacman -Rdd xero-kde-config --noconfirm
+      sudo pacman -Rdd ArchCA-kde-config --noconfirm
       sudo pacman -Rdd lightly-git --noconfirm
       sudo pacman -S kde-rice kvantum kvantum-theme-layan-git --noconfirm --needed
       cp -rf /etc/skel/. ~
-      sudo sed -i "s/Current=.*/Current=XeroDark/" /etc/sddm.conf.d/kde_settings.conf
-      cd ~ && git clone https://github.com/xerolinux/default-grub.git
+      sudo sed -i "s/Current=.*/Current=ArchCADark/" /etc/sddm.conf.d/kde_settings.conf
+      cd ~ && git clone https://github.com/ArchCAlinux/default-grub.git
       cd ~/default-grub/ && sudo ./install.sh
       rm -rf ~/default-grub
       sleep 2

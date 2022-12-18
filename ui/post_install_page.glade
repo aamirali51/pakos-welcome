@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License
 along with cachyos-welcome.  If not, see <http://www.gnu.org/licenses/>.
 
 -->
-<interface domain="xerowelcome">
+<interface domain="ArchCAwelcome">
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-css-provider-path style.css -->
   <!-- interface-license-type gplv3 -->
@@ -73,9 +73,9 @@ along with cachyos-welcome.  If not, see <http://www.gnu.org/licenses/>.
             <property name="can-focus">False</property>
             <property name="label" translatable="yes">This is where you configure your system using variety of our scripts. We will do our best to help you tweak your system for a good balance between best performance &amp; stability.
 
-Use only what you need, not all are meant to be used. Also, this is just the beginning, we will have more tweaks added as time goes by. Oh, and this tool was meant to only be used with XeroLinux, if you like some of the features and want to use them on another Arch-based Distro, although you "Technically" can, it is not recommended, this might lead to certain instabilites. Please do NOT ask for support if you do. Thanks.
+Use only what you need, not all are meant to be used. Also, this is just the beginning, we will have more tweaks added as time goes by. Oh, and this tool was meant to only be used with ArchCALinux, if you like some of the features and want to use them on another Arch-based Distro, although you "Technically" can, it is not recommended, this might lead to certain instabilites. Please do NOT ask for support if you do. Thanks.
 
-Enjoy tweaking your XeroLinux ;)</property>
+Enjoy tweaking your ArchCALinux ;)</property>
             <property name="wrap">True</property>
             <property name="width-chars">1</property>
             <property name="max-width-chars">1</property>

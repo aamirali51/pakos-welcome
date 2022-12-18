@@ -2,8 +2,8 @@
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
-# Author 	: 	DarkXero
-# Website 	: 	http://xerolinux.github.io
+# Author 	: 	DarkArchCA
+# Website 	: 	http://ArchCAlinux.github.io
 ##################################################################################################################
 # change a commit comment
 # git commit --amend -m "more info"

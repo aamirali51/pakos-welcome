@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License
 along with cachyos-welcome.  If not, see <http://www.gnu.org/licenses/>.
 
 -->
-<interface domain="xerowelcome">
+<interface domain="ArchCAwelcome">
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-css-provider-path style.css -->
   <!-- interface-license-type gplv3 -->
@@ -71,7 +71,7 @@ along with cachyos-welcome.  If not, see <http://www.gnu.org/licenses/>.
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="has-focus">True</property>
-                <property name="label" translatable="yes">Welcome to XeroLinux!</property>
+                <property name="label" translatable="yes">Welcome to ArchCALinux!</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                   <attribute name="scale" value="2"/>
@@ -89,7 +89,7 @@ along with cachyos-welcome.  If not, see <http://www.gnu.org/licenses/>.
                 <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Thank you for joining our community!
 
-We, the XeroLinux Developers, hope that you will enjoy using XeroLinux as much as we enjoy building it. The links below will help you get started with your new operating system. So enjoy the experience, and don't hesitate to send us your feedback.</property>
+We, the ArchCALinux Developers, hope that you will enjoy using ArchCALinux as much as we enjoy building it. The links below will help you get started with your new operating system. So enjoy the experience, and don't hesitate to send us your feedback.</property>
                 <property name="wrap">True</property>
                 <property name="width-chars">1</property>
                 <property name="max-width-chars">1</property>
@@ -444,7 +444,7 @@ We, the XeroLinux Developers, hope that you will enjoy using XeroLinux as much a
       <object class="GtkHeaderBar" id="headerbar">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
-        <property name="title">XeroLinux Hello</property>
+        <property name="title">ArchCALinux Hello</property>
         <property name="show-close-button">True</property>
         <child>
           <placeholder/>

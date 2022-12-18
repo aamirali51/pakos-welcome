@@ -9,12 +9,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 
 sleep 2
 echo "##################################"
-echo "#  Importing XeroLinux Settings  #"
+echo "#  Importing ArchCALinux Settings  #"
 echo "##################################"
 mv $HOME/.bashrc $HOME/.bashrc.bk
-cd $HOME/ && wget -O .bashrc https://raw.githubusercontent.com/xerolinux/xero-fixes/main/conf/.ombrc
+cd $HOME/ && wget -O .bashrc https://raw.githubusercontent.com/ArchCAlinux/ArchCA-fixes/main/conf/.ombrc
 cd $HOME/.oh-my-bash/aliases/ && mv misc.aliases.sh misc.aliases.sh.bk
-cd $HOME/.oh-my-bash/aliases/ && wget https://raw.githubusercontent.com/xerolinux/xero-fixes/main/conf/misc.aliases.sh
+cd $HOME/.oh-my-bash/aliases/ && wget https://raw.githubusercontent.com/ArchCAlinux/ArchCA-fixes/main/conf/misc.aliases.sh
 
 sleep 2
 echo "#################################"

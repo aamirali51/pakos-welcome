@@ -48,8 +48,8 @@ fn show_about_dialog() {
     let dialog = gtk::AboutDialog::builder()
         .transient_for(&main_window)
         .modal(true)
-        .program_name(&gettextrs::gettext("XeroLinux Welcome"))
-        .comments(&gettextrs::gettext("Welcome screen for XeroLinux"))
+        .program_name(&gettextrs::gettext("ArchCALinux Welcome"))
+        .comments(&gettextrs::gettext("Welcome screen for ArchCALinux"))
         .version(VERSION)
         .logo(&logo)
         .authors(vec![
@@ -72,7 +72,7 @@ fn main() {
     gettextrs::bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR).expect("Unable to bind the text domain.");
     gettextrs::textdomain(GETTEXT_PACKAGE).expect("Unable to switch to the text domain.");
 
-    glib::set_application_name("XeroLinuxHello");
+    glib::set_application_name("ArchCALinuxHello");
 
     gtk::init().expect("Unable to start GTK3.");
 
@@ -132,11 +132,11 @@ fn build_ui(application: &gtk::Application) {
 
     // Subtitle of headerbar
     let header: HeaderBar = builder.object("headerbar").expect("Could not get the headerbar");
-    header.set_subtitle(Some("XeroLinux rolling"));
+    header.set_subtitle(Some("ArchCALinux rolling"));
 
     // Load logo on first page
     {
-        let logo_path = format!("{}/data/img/xero.png", PKGDATADIR);
+        let logo_path = format!("{}/data/img/ArchCA.png", PKGDATADIR);
         let logo = Pixbuf::from_file(logo_path).unwrap();
         let distribimage: gtk::Image =
             builder.object("distriblogo").expect("Could not get the distriblogo");

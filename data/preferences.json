@@ -11,12 +11,12 @@
     "ui_path": "/usr/share/ArchCa/ui/ArchCa.glade",
     "style_path": "/usr/share/ArchCa/ui/style.css",
     "urls": {
-        "development": "https://github.com/xerolinux",
-        "website": "https://xerolinux.xyz",
-        "donate": "https://www.patreon.com/XeroLinux",
-        "forum": "https://forum.xerolinux.xyz",
+        "development": "https://github.com/ArchCAlinux",
+        "website": "https://ArchCAlinux.xyz",
+        "donate": "https://www.patreon.com/ArchCALinux",
+        "forum": "https://forum.ArchCAlinux.xyz",
         "discord": "https://discord.gg/Xg6T78ahtK",
-        "mastodon": "https://fosstodon.org/@TechXero",
-        "youtube": "https://youtube.com/c/XeroLinuxOfficial"
+        "mastodon": "https://fosstodon.org/@TechArchCA",
+        "youtube": "https://youtube.com/c/ArchCALinuxOfficial"
     }
 }

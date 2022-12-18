@@ -19,19 +19,19 @@ sleep 2
 echo "Step 3 - Grabing PowerLevel10k Theme"
 echo "#####################################"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-cd $HOME/ && wget https://raw.githubusercontent.com/xerolinux/xero-fixes/main/conf/.p10k.zsh
+cd $HOME/ && wget https://raw.githubusercontent.com/ArchCAlinux/ArchCA-fixes/main/conf/.p10k.zsh
 sleep 2
 echo "Step 4 - Setting Default Shell to ZSH"
 echo "#####################################"
 sudo chsh $USER -s /bin/zsh
 cd $HOME/.local/share/konsole/
-sed -i 's|/bin/bash|/bin/zsh|g' XeroLinux.profile
+sed -i 's|/bin/bash|/bin/zsh|g' ArchCALinux.profile
 sleep 2
-echo "Step 5 - Importing XeroLinux .zshrc"
+echo "Step 5 - Importing ArchCALinux .zshrc"
 echo "#####################################"
 cd $HOME/
 rm .zshrc
-wget https://raw.githubusercontent.com/xerolinux/xero-fixes/main/conf/.zshrc
+wget https://raw.githubusercontent.com/ArchCAlinux/ArchCA-fixes/main/conf/.zshrc
 sleep 2
 echo "#####################################"
 echo "     Done ! Now Logout & back in     "
