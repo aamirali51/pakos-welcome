@@ -1,0 +1,22 @@
+{
+    "default_locale": "en",
+    "autostart_path": "~/.config/autostart/ArchCa.desktop",
+    "data_path": "/usr/share/ArchCa/data/",
+    "desktop_path": "/usr/share/applications/ArchCa.desktop",
+    "installer_path": "/usr/bin/calamares",
+    "live_path": "/run/archiso/airootfs",
+    "locale_path": "/usr/share/locale/",
+    "logo_path": "/usr/share/icons/hicolor/scalable/apps/",
+    "save_path": "~/.config/ArchCa.json",
+    "ui_path": "/usr/share/ArchCa/ui/ArchCa.glade",
+    "style_path": "/usr/share/ArchCa/ui/style.css",
+    "urls": {
+        "development": "https://github.com/xerolinux",
+        "website": "https://xerolinux.xyz",
+        "donate": "https://www.patreon.com/XeroLinux",
+        "forum": "https://forum.xerolinux.xyz",
+        "discord": "https://discord.gg/Xg6T78ahtK",
+        "mastodon": "https://fosstodon.org/@TechXero",
+        "youtube": "https://youtube.com/c/XeroLinuxOfficial"
+    }
+}
