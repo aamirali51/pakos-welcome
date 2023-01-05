@@ -1,20 +1,37 @@
-<big>CachyOS 22.07</big>
+<big>CachyOS 22.12</big>
+
+Dies ist unser letztes Release für dieses Jahr. Es enthält eine Menge Fehlerbehebungen und das ISO wurde weiter aufpoliert.
+Das zfshostid funktioniert nun wie erwartet, auch das Ranking der Mirrors berücksichtigt nun auch die CachyOS Mirrors um eine schnellere Online-Installation zu ermöglichen.
+Außerdem werden wir eine ISO veröffentlichen, die llvm 15 enthält, um die Kompatibilität mit neueren AMD-Karten zu gewährleisten.
+Das llvm 15 ISO funktioniert NICHT für x86-64 CPUs und funktioniert nur für neuere (2012+) CPUs.
+
+Außerdem beginnen wir damit, x86-64-v4 kompilierte Pakete in unser cachyos-v4 Repo aufzunehmen. Dieses Repo wird mit dem nächsten Release zusätzlich mit einer automatischen Erkennung versehen.
 
 <big>Features:</big>
 
-- Auswahl des Boot-Loaders: Der Benutzer kann nun bei der Online-Installation zwischen grub und systemd-boot wählen
-- Bei der Online-Installation wird nun immer das neueste Calamares installiert, was hilft, Fehlerbehebungen "on the air" durchzuführen
-- Calamares hat jetzt ein mhwd-Modul, das automatisch die benötigten Treiber installiert (freie Treiber)
-- Calamares hat neue Bildfolien bei der Installation
-- fstab und zfs mount Optionen wurden aktualisiert
-- HiDPI-Unterstützung
+- Neuer GRUB-Hintergrund beim ISO-Bootloader
+- Memtest ist jetzt für UEFI-Systeme enthalten
+- CachyOS-sddm-Theme wurde der KDE-Installation hinzugefügt
+- Automatisches Versionsskript beim Erstellen der ISO hinzugefügt
+- Calamares auf den neuesten Stand gebracht
+- Die Spiegel werden nun mit "cachyos-rate-mirros" eingestuft, welches unsere Spiegel und die arch-Spiegel einstuft
+- Pakete aktualisiert: 6.1.1 Kernel, mesa 22.3.1, plasma 5.26.4,...
+- Das Kofuku Desktop Enviroment wurde entfernt
+- extra ISO mit llvm 15 enthalten, um Unterstützung für neuere AMD-Karten zu bieten
 
 <big>Fehlerbehebungen:</big>
 
-- Der Locales-Bug in Calamares wurde behoben
-- F2FS wurde für den Grub-Bootloader entfernt, da es derzeit nicht funktioniert (Calamares-Problem), es kann aber weiterhin mit systemd-boot verwendet werden
-- Calamares zeigt nun das korrekte Standard-Dateisystem an
-- Gnome ISO wurde korrigiert
-- Fehlende Pakete im Live-ISO wurden für die Offline-Installation hinzugefügt
-- btrfs swap luksencryption wurde behoben
-- übliche Übersetzungskorrekturen
+- Calamares wurde behoben, wenn GNOME als ISO verwendet wird
+- zfshostid funktioniert nun korrekt für die Offline- und Online-Installation
+- Hinzufügen des "kms"-Hakens zum initcpiocfg-Modul, um den archlinux-Vorgaben zu folgen
+- Und weitere ISO-Korrekturen
+
+Wie immer kann der Download auf unseren Mirrors in der Sourgeforge gefunden werden.
+
+https://mirror.cachyos.org/ISO/
+https://mirror.cachyos.org/ISO/kde/221230-llvm-15/ # Damit neuere AMD-Karten korrekt booten
+https://sourceforge.net/projects/cachyos-arch/files/
+
+Mit freundlichen Grüßen
+
+CachyOS - Team

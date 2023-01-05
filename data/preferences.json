@@ -1,22 +1,13 @@
 {
     "default_locale": "en",
-    "autostart_path": "~/.config/autostart/ArchCa.desktop",
-    "data_path": "/usr/share/ArchCa/data/",
-    "desktop_path": "/usr/share/applications/ArchCa.desktop",
+    "autostart_path": "~/.config/autostart/pakos-hello.desktop",
+    "data_path": "/usr/share/pakos-hello/data/",
+    "desktop_path": "/usr/share/applications/pakos-hello.desktop",
     "installer_path": "/usr/bin/calamares",
     "live_path": "/run/archiso/airootfs",
     "locale_path": "/usr/share/locale/",
     "logo_path": "/usr/share/icons/hicolor/scalable/apps/",
-    "save_path": "~/.config/ArchCa.json",
-    "ui_path": "/usr/share/ArchCa/ui/ArchCa.glade",
-    "style_path": "/usr/share/ArchCa/ui/style.css",
-    "urls": {
-        "development": "https://github.com/ArchCAlinux",
-        "website": "https://ArchCAlinux.xyz",
-        "donate": "https://www.patreon.com/ArchCALinux",
-        "forum": "https://forum.ArchCAlinux.xyz",
-        "discord": "https://discord.gg/Xg6T78ahtK",
-        "mastodon": "https://fosstodon.org/@TechArchCA",
-        "youtube": "https://youtube.com/c/ArchCALinuxOfficial"
-    }
+    "save_path": "~/.config/pakos-hello.json",
+    "ui_path": "/usr/share/pakos-hello/ui/pakos-hello.glade",
+    "style_path": "/usr/share/pakos-hello/ui/style.css",
 }

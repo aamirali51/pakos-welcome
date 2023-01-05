@@ -1,5 +1,5 @@
-project('ArchCAwelcome', 'rust',
-        version: '1.0.9',
+project('pakos-hello', 'rust',
+        version: '0.9.0',
         license: 'GPLv3',
         meson_version: '>=0.56.0',
         default_options: ['buildtype=debugoptimized',
@@ -10,7 +10,7 @@ project('ArchCAwelcome', 'rust',
 i18n = import('i18n')
 gnome = import('gnome')
 
-base_id = 'org.ArchCAlinux.welcome'
+base_id = 'org.pakos.hello'
 
 dependency('glib-2.0', version: '>= 2.66')
 dependency('gio-2.0', version: '>= 2.66')

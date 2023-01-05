@@ -1,20 +1,35 @@
 # Maintainer: Vladislav Nepogodin <nepogodin.vlad@gmail.com>
 
-pkgname=ArchCA
-pkgver=1.0.9
-pkgrel=8
-pkgdesc='Welcome screen for AchCA'
-arch=('x86_64')
+pkgname=cachyos-hello-git
+pkgver=54.a7abc62
+pkgrel=1
+pkgdesc='Welcome screen for CachyOS'
+arch=('x86_64' 'x86_64_v3')
 license=(GPLv3)
-url="https://github.com/aamirali51/pakos-welcome"
+url="https://github.com/cachyos/cachyos-welcome"
 depends=('gtk3' 'glib2')
 makedepends=('meson' 'git' 'mold' 'rustup' 'clang')
 source=("${pkgname}::git+$url.git")
 sha512sums=('SKIP')
-provides=('ArchCAwelcome')
-conflicts=('ArchCAwelcome')
-replaces=('ArchCAlinux-tool' 'ArchCAlinux-tool-dev')
+provides=('cachyos-hello')
+conflicts=('cachyos-hello')
 options=(strip)
+
+pkgver() {
+  cd "${srcdir}/${pkgname}"
+  printf "%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+check() {
+  cd ${srcdir}/$pkgname
+  cargo test --release --verbose
+
+  echo "--Checking with clippy--"
+  cargo clippy --release
+
+  echo "--Checking style--"
+  cargo fmt --all -- --check
+}
 
 build() {
   cd "${srcdir}/${pkgname}"
@@ -23,6 +38,16 @@ build() {
     echo "Installing nightly compiler…"
     rustup toolchain install nightly
     rustup default nightly
+  fi
+
+  if ! which cargo >/dev/null 2>&1 || ! cargo fmt --help >/dev/null 2>&1; then
+    echo "Installing rustfmt…"
+    rustup component add rustfmt
+  fi
+
+  if ! which cargo >/dev/null 2>&1 || ! cargo clippy --help >/dev/null 2>&1; then
+    echo "Installing clippy…"
+    rustup component add clippy
   fi
 
   _cpuCount=$(grep -c -w ^processor /proc/cpuinfo)
@@ -39,10 +64,8 @@ package() {
   export RUSTFLAGS="-Cembed-bitcode -C opt-level=3 -Ccodegen-units=1 -Clinker=clang -C link-arg=-flto -Clink-arg=-fuse-ld=/usr/bin/mold"
   DESTDIR="${pkgdir}" meson install
 
-  cp "$pkgdir/usr/share/applications/$pkgname.desktop" "$pkgdir/usr/share/applications/system-tool.desktop"
-
-  install -Dvm644 ../$pkgname.desktop \
-    "$pkgdir/etc/skel/.config/autostart/$pkgname.desktop"
+  install -Dvm644 ../${pkgname/-git}.desktop \
+    "$pkgdir/etc/skel/.config/autostart/${pkgname/-git}.desktop"
 }
 
 # vim:set sw=2 sts=2 et:

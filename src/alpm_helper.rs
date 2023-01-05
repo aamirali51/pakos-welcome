@@ -1,7 +1,7 @@
 use crate::utils;
 use crate::utils::PacmanWrapper;
-
-use gtk::prelude::*;
+use std::path::Path;
+use subprocess::Exec;
 
 #[derive(Clone, Debug)]
 #[repr(C)]
@@ -32,44 +32,16 @@ impl AlpmHelper {
         self.pkg_list_install.is_empty() && self.pkg_list_removal.is_empty()
     }
 
-    pub fn do_update(&self, is_flatpak: bool) -> AlpmHelperResult {
+    pub fn do_update(&self) -> AlpmHelperResult {
         let mut result = AlpmHelperResult::Nothing;
         if self.pkg_list_install.is_empty() && self.pkg_list_removal.is_empty() {
             return result;
         }
 
-        if !self.pkg_list_removal.is_empty()
-            && self.install_apps(&self.pkg_list_removal, false, is_flatpak)
-        {
-            if !is_flatpak {
-                let infodialog = gtk::MessageDialog::builder()
-                    .title("Removal completed successfully!")
-                    .text(
-                        format!("These pkgs '{:?}' has been removed!", self.pkg_list_removal)
-                            .as_str(),
-                    )
-                    .modal(true)
-                    .message_type(gtk::MessageType::Info)
-                    .build();
-                infodialog.show();
-            }
+        if !self.pkg_list_removal.is_empty() && self.install_apps(&self.pkg_list_removal, false) {
             result = AlpmHelperResult::Remove;
         }
-        if !self.pkg_list_install.is_empty()
-            && self.install_apps(&self.pkg_list_install, true, is_flatpak)
-        {
-            if !is_flatpak {
-                let infodialog = gtk::MessageDialog::builder()
-                    .title("Installation completed successfully!")
-                    .text(
-                        format!("These pkgs '{:?}' has been installed!", self.pkg_list_install)
-                            .as_str(),
-                    )
-                    .modal(true)
-                    .message_type(gtk::MessageType::Info)
-                    .build();
-                infodialog.show();
-            }
+        if !self.pkg_list_install.is_empty() && self.install_apps(&self.pkg_list_install, true) {
             if result == AlpmHelperResult::Nothing {
                 result = AlpmHelperResult::Add;
             } else {
@@ -104,14 +76,19 @@ impl AlpmHelper {
         self.pkg_list_removal.contains(pkg_name)
     }
 
-    fn install_apps(&self, pkg_list: &Vec<String>, install: bool, is_flatpak: bool) -> bool {
+    fn install_apps(&self, pkg_list: &Vec<String>, install: bool) -> bool {
         if pkg_list.is_empty() {
             return false;
         }
 
         let packages_do = pkg_list.iter().map(|s| s.to_string() + " ").collect::<String>();
-
-        if !is_flatpak {
+        if Path::new("/sbin/pamac-installer").exists() {
+            let arg = match install {
+                false => "--remove",
+                _ => "",
+            };
+            Exec::shell(format!("pamac-installer {} {}", arg, packages_do)).join().unwrap();
+        } else {
             let (cmd, escalate) = match install {
                 true => match utils::get_pacman_wrapper() {
                     PacmanWrapper::Pak => ("pak -Sy", false),
@@ -127,25 +104,15 @@ impl AlpmHelper {
                 },
             };
             let _ = utils::run_cmd_terminal(format!("{} {}", cmd, packages_do), escalate);
-        } else {
-            let arg = match install {
-                false => "remove",
-                _ => "install",
-            };
-            let _ = utils::run_cmd_terminal(format!("flatpak {} {}", arg, packages_do), false);
         }
 
         match install {
-            true => self.app_installed(&pkg_list[0], is_flatpak),
-            false => !self.app_installed(&pkg_list[0], is_flatpak),
+            true => self.app_installed(&pkg_list[0]),
+            false => !self.app_installed(&pkg_list[0]),
         }
     }
 
-    fn app_installed(&self, pkg_names: &str, is_flatpak: bool) -> bool {
-        if is_flatpak {
-            return true;
-        }
-
+    fn app_installed(&self, pkg_names: &str) -> bool {
         let pkg_name_vec = pkg_names.split(' ').map(String::from).collect::<Vec<String>>();
         let pkg_name = pkg_name_vec.first().unwrap();
 
