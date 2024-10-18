@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/python3 /usr/share/tthlinux-welcome-app/tthlinux-welcome-app.py
