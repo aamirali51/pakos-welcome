@@ -6,7 +6,7 @@ Comment=Welcome Application for tthlinux Installations
 Exec=/usr/local/bin/tthlinux-welcome-app
 Icon=tthlinux-hello
 Terminal=false
-Type=Application
+
 Categories=GTK;Settings;Security;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;X-Unity-Settings-Panel;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
 Keywords=welcome;tool;
 StartupNotify=true
